@@ -1,0 +1,99 @@
+/* Tablet Landscape */
+@media screen and (max-width: 1060px) {
+    #primary { width:67%; }
+    #secondary { width:30%; margin-left:3%;}
+}
+/* Tabled Portrait */
+@media screen and (max-width: 768px) {
+    #primary { width:100%; }
+    #secondary { width:100%; margin:0; border:none; }
+}
+
+@media (min-device-width:600px) {
+    img[data-src-600px] {
+        content: attr(data-src-600px, url);
+    }
+}
+@media (min-device-width:800px) {
+    img[data-src-800px] {
+        content: attr(data-src-800px, url);
+    }
+}
+
+html { font-size:100%; }
+
+body {
+	background-image: url("BACKGROUND-GRIS-min.jpg");
+	background-color: #cccccc;
+}
+
+@-ms-viewport{
+  width: auto;
+}
+
+#ip_holder{
+          font-size:18px;
+          color:blue;
+          width:auto;
+          padding:0;
+          margin:0;
+          text-decoration:none;
+}
+
+#version{
+          font-size:18px;
+          color:red;
+          text-decoration:none;
+}
+#os{
+          font-size:18px;
+          color:red;
+          text-decoration:none;
+}
+pre {
+	box-sizing: border-box;
+	width: auto;
+	padding:0;
+	margin:0;
+	font-size: 18px;
+	line-height: 20px;
+	color: #333;
+	position:relative;
+	float:none;
+}
+#ipinfo {
+	width:auto;
+	padding:0;
+	margin:0;
+}
+
+#mapholder {
+	width:100%;
+	height:auto;
+	margin:0;
+	position:relative;
+    float:none;
+}
+#text {
+	width: auto;
+	text-align: justify;
+	text-justify: inter-word;
+	position:relative;
+	float:inherit;
+}
+
+#window_os {
+	font-size:18px;
+    color:green;
+    text-decoration:none;
+}
+
+#browser_lang {
+	font-size:18px;
+    color:green;
+    text-decoration:none;
+}
+
+#window_size {
+	font-size:16px;
+}
