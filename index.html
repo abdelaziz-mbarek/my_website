@@ -1,80 +1,254 @@
-<!DOCTYPE html>
+<!DOCTYPE html >
 
-<html>
+<html lang="en-us">
 
-    <head onload=>
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-        <title>What is my IP address,User Agent? Lookup IP and more...</title>
-        <meta name="description" content="IP address lookup, location. Find, get, and show my IP address. show your browser User Agent, browser accept language.">
-        <meta name="keywords" content="my ip ,ip, useragent, accept language, address, my, what, is, find, get, show, locate, change, location, how, do, i, ip address, surf, web, geolocation, geolocate, lookup, look up, locate">
-        <meta property="og:title" content="What is my IP address,User Agent? Lookup IP and more...">
-        <meta property="og:description" content="IP address lookup, location. Find, get, and show my IP address. show your browser User Agent, browser accept language.">
-        <meta property="og:type" content="website">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <meta name="HandheldFriendly" content="true">
-        <link rel=StyleSheet HREF="style_normal.css" type=text/css title=style>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-        <p id="ip_holder"></p>
-        <style>
-        .off {color:#aa2222;}
-        .on { color:green;}
-        .on,.off { font-weight: bold; }
-        </style>
-        <table cellpadding="0" cellspacing="0"><tbody><tr>
-        <td><div id="javascript_check"><span class="option_title">Javascript:</span> <span class="on">On</span></div>
-        </td><td width="10"></td><td><div id="cookie_check"><span class="option_title">Cookie:</span> <span class="on">On</span></div>
-        </td><td width="10"></td><td><div id="flash_version"><span class="option_title">Flash:</span> <span class="off">Missing/Disable</span></div>
-        </td></tr></tbody></table>
-        <table cellpadding="0" cellspacing="0"><tbody><tr>
-        <td><div id="browser_lang"><span class="option_title">Language:</span> </div>
-        </td><td width="10"></td><td><div id="window_size"><span class="option_title">Screen Resolution:</span> </div>
-        </td><td width="10"></td><td><div id="window_os"><span class="option_title">Operating System:</span> </div>
-        </td></tr></tbody></table>
-        </td></tr><tr><td>
-        <div id="plugins_total"><span class="option_title">Total plugins: </span></div>
-        <div id="plugins_list" style="width:600px;max-height:210px;overflow-y:auto">
-             <span style="color:#868686;"></span>
-        <br> <span style="color:#868686;"></span>
-        <br> <span style="color:#868686;"></span><br></div>
-
-        </td></tr></tbody></table>
-        <div id="mapholder"></div>
-    </head>
-
-<body leftmargin="50" >
-
-    <div id="demo" style="font-size:18px;color:green;"><b>Click the button to get your full Informations:</b>
-    <button onclick="showPosition(); getInfo();" style="font-size:18px;color:green;">Get your full Informations</button></div>
-    <div id="ipinfo"></div>
-
-        <td>
-        <p>
-        <font style="font-size:15px"><b>What is an IP address?</b></font><br>
-        An Internet Protocol address (IP address) is a numerical label assigned to each device (e.g., computer, printer) participating in a computer network that uses the Internet Protocol for communication.
-        An IP address serves two principal functions: host or network interface identification and location addressing.
-        Its role has been characterized as follows: "A name indicates what we seek. An address indicates where it is. A route indicates how to get there."
-        The designers of the Internet Protocol defined an IP address as a 32-bit number and this system, known as Internet Protocol Version 4 (IPv4), is still in use today.
-        However, due to the enormous growth of the Internet and the predicted depletion of available addresses, a new addressing system (IPv6), using 128 bits for the address, was developed in 1995, standardized as RFC 2460 in 1998, and is being deployed worldwide since the mid-2000s.
-        IP addresses are binary numbers, but they are usually stored in text files and displayed in human-readable notations, such as 172.16.254.1 (for IPv4), and 2001:db8:0:1234:0:567:8:1 (for IPv6).
-        The Internet Assigned Numbers Authority (IANA) manages the IP address space allocations globally and delegates five regional Internet registries (RIRs) to allocate IP address blocks to local Internet registries (Internet service providers) and other entities.
-        </p>
-        </td>
-        <td>
-        <p>
-        <font style="font-size:15px"><b>What's a User Agent?</b></font><br>
-        A user agent is a software program that can send requests to a web server and receive responses to those requests. This is precisely what a browser does. But there are also automatic programs known as robots that are user agents. Further, web caching servers can send requests to a web server and receive responses to those requests. They generally do this on behalf of other user agents, but could in some cases do it on their own behalf (for example during pre-emptive caching) in which case they would behave like user agents. Seen from the perspective of the web server, all user agents look the same. It is not immediately obvious to the server if it is being visited by a human-driven browser or by an automated retrieval system. So we refer to all of them as user agents.
-        </p>
-        </td>
-    <script type="application/javascript">
-        let pip;
-        function getIP(json) {
-            pip = json.ip;
-            return pip;
-        }
-        </script>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <link rel="alternate" href="http://ipuseragent.ga/" hreflang="en-us" />
+        <title>Your IP address and User Agent are : Lookup IP and more...</title>
+        <meta name="description" content="IP address lookup, location. Find, get, and show my IP address. show your browser User Agent, browser accept language."/>
+        <meta name="keywords" content="my ip ,ip, useragent, accept language, address, my, what, is, find, get, show, locate, change, location, how, do, i, ip address, surf, web, geolocation, geolocate, lookup, look up, locate, user agent, ip adress"/>
+        <meta property="og:title" content="Your IP address and User Agent are : Lookup IP and more..."/>
+        <meta property="og:description" content="IP address lookup, location. Find, get, and show my IP address. show your browser User Agent, browser accept language."/>
+        <meta property="og:type" content="website"/>
+        <meta property="og:image" content="/img/favicon.png"/>
+        <link rel="shortcut icon" href="/img/favicon.ico"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <meta name="HandheldFriendly" content="true"/>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-149482029-1"></script>
         <script>
-            function init_info(){
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+        
+          gtag('config', 'UA-149482029-1');
+        </script>
+        <script data-ad-client="ca-pub-6001717314181155" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <link rel=StyleSheet HREF="/css/style_normal.css" type=text/css title=style />
+        
+        <script>
+    
+            function setCookie(name, value) { 
+              var expires=1000*60*60*24*365*5; 
+              
+              path="/";
+              domain=".ipuseragent.ga";
+              secure=false;
+              var today = new Date(); 
+              today.setTime( today.getTime() ); 
+              var expires_date = new Date( today.getTime() + (expires) ); 
+              document.cookie = name + "=" +escape( value ) + 
+                      ( ( expires ) ? ";expires=" + expires_date.toGMTString() : "" ) + //expires.toGMTString() 
+                      ( ( path ) ? ";path=" + path : "" ) + 
+                      ( ( domain ) ? ";domain=" + domain : "" ) + 
+                      ( ( secure ) ? ";secure" : "" ); 
+            } 
+            
+            function getCookie( name ) {
+              var nameOfCookie = name + "=";
+              var x = 0;
+              while ( x <= document.cookie.length ) {
+                var y = (x+nameOfCookie.length);
+                if ( document.cookie.substring( x, y ) == nameOfCookie ) {
+                  if ( (endOfCookie=document.cookie.indexOf( ";", y )) == -1 )
+                     endOfCookie = document.cookie.length;
+                  return unescape( document.cookie.substring( y, endOfCookie ) );
+                }
+                x = document.cookie.indexOf( " ", x ) + 1;
+                if ( x == 0 ) break;
+              }
+              return "";
+            }
+        </script>
+        
+        <style>
+            .bottomtext {
+                font-size: 14px;
+                color: blue;
+                text-decoration: none;
+            }
+            
+            .bottomtext2 {
+                font-size: 15px;
+                color: blue;
+            }
+            
+            .bottomtextbig {
+                font-size: 17px;
+                color: blue;
+                text-decoration: none;
+            }
+            .option_title {
+                font-size:18px;
+            }
+            .off {
+                color: #aa2222;
+            }
+                                        
+            .on {
+                color: green;
+            }
+            .on,.off {
+                font-size:18px;
+                font-weight: bold;
+            }
+        </style>
+    </head>
+    
+    <body style='margin:20px;'>
+    
+        
+        <br/>
+        <br/>
+        <div class="container-fluid">
+        <table>
+        <tbody>
+            <tr>
+                <td>
+                    <a href="./" title="Go Home"><img alt='favicon' src="/img/favicon.png" width="45"></a>
+                </td>
+                <td style="width:3px;">
+                </td>
+                <td style="font-size:25px;font-family:Verdana;color:#1C7E12">What is my IP address,User Agent?
+                </td>
+            </tr>
+        </tbody>
+        </table>
+        </div>
+        <br/>
+        <script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer>
+        </script>
+        <div class="LI-profile-badge" id="badge" data-version="v1" data-size="large" data-locale="en_US" data-type="vertical" data-theme="light" data-vanity="abdelaziz-mbk-a236a3190"><a class="LI-simple-link" href='https://linkedin.com/in/abdelaziz-mbk-a236a3190?trk=profile-badge'>abdelaziz mbk</a>
+        </div>
+        <div class="container-fluid">
+        <table>
+            <tbody>
+                <tr>
+                    <td>
+                        <p id="ip_holder"></p>
+                        </td>
+                </tr>
+            </tbody>
+        </table>
+        <table>
+            <tbody>
+                <tr>
+                    <td>
+                        <div id="javascript_check"><span class="option_title">Javascript:</span> <span class="on">On</span></div>
+                    </td>
+                    <td style="width:10px;"></td>
+                    <td>
+                        <div id="cookie_check"><span class="option_title">Cookie:</span> <span class="on">On</span></div>
+                    </td>
+                    <td style="width:10px;"></td>
+                    <td>
+                        <div id="flash_version"><span class="option_title">Flash:</span> <span class="off">Missing/Disable</span></div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table>
+            <tbody>
+                <tr>
+                    <td>
+                        <div id="browser_lang"><span class="option_title">Language:</span> </div>
+                    </td>
+                    <td style="width:10px;"></td>
+                    <td>
+                        <div id="window_size"><span class="option_title">Screen Resolution:</span> </div>
+                    </td>
+                    <td style="width:10px;"></td>
+                    <td>
+                        <div id="window_os"><span class="option_title">Operating System:</span> </div>
+                    </td>
+                </tr>
+                </tbody>
+        </table>
+        <table>
+        <tr>
+            <td>
+                        <div id="plugins_total"><span class="option_title">Total plugins: </span></div>
+                        <div id="plugins_list" style="width:600px;max-height:210px;overflow-y:auto">
+                            <span style="color:blue;"></span>
+                            <br/> <span style="color:blue;"></span>
+                            <br/> <span style="color:blue;"></span>
+                            <br/>
+                            <br/>
+                        </div>
+                    </td>
+        </tr>
+        <tr>
+            <td>
+                <br/>
+                <div class="container-fluid" id="mapholder"></div>
+                <br/>
+            </td>
+        </tr>
+        <!--<tr>-->
+        <!--    <td>-->
+        <!--        <br/>-->
+        <!--        <div id="demo" style="font-size:18px;color:#000745;"><b>Click the button to get your full Informations:</b>-->
+        <!--            <button onclick="getInfo();" style="font-size:18px;color:black;">Get your full Informations-->
+        <!--            </button>-->
+        <!--        </div>-->
+        <!--    </td>-->
+        <!--</tr>-->
+        </tbody>
+        </table>
+        <!--<form id="result">-->
+        <p id="hoo"></p>
+        <div class="well" id="ipinfo"></div>
+        <!--</form>-->
+        </div>
+        <div class="container-fluid" id="text">
+            <br/>
+            <br/>
+            <table>
+            <tbody>
+                <tr>
+                    <td style="font-size:15px"><b>What is an IP address?</b>
+                        <br/> An Internet Protocol address (IP address) is a numerical label assigned to each device (e.g., computer, printer) participating in a computer network that uses the Internet Protocol for communication. An IP address serves two principal functions: host or network interface identification and location addressing. Its role has been characterized as follows: "A name indicates what we seek. An address indicates where it is. A route indicates how to get there." The designers of the Internet Protocol defined an IP address as a 32-bit number and this system, known as Internet Protocol Version 4 (IPv4), is still in use today. However, due to the enormous growth of the Internet and the predicted depletion of available addresses, a new addressing system (IPv6), using 128 bits for the address, was developed in 1995, standardized as RFC 2460 in 1998, and is being deployed worldwide since the mid-2000s. IP addresses are binary numbers, but they are usually stored in text files and displayed in human-readable notations, such as 172.16.254.1 (for IPv4), and 2001:db8:0:1234:0:567:8:1 (for IPv6). The Internet Assigned Numbers Authority (IANA) manages the IP address space allocations globally and delegates five regional Internet registries (RIRs) to allocate IP address blocks to local Internet registries (Internet service providers) and other entities.
+    
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <br>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="font-size:15px"><b>What's a User Agent?</b>
+                    <br/> A user agent is a software program that can send requests to a web server and receive responses to those requests. This is precisely what a browser does. But there are also automatic programs known as robots that are user agents. Further, web caching servers can send requests to a web server and receive responses to those requests. They generally do this on behalf of other user agents, but could in some cases do it on their own behalf (for example during pre-emptive caching) in which case they would behave like user agents. Seen from the perspective of the web server, all user agents look the same. It is not immediately obvious to the server if it is being visited by a human-driven browser or by an automated retrieval system. So we refer to all of them as user agents.
+    
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+    
+                    </td>
+                </tr>
+            </tbody>
+            </table>
+        </div>
+        <br/>
+        <br/>
+        <script>
+            let pip;
+    
+            function getIP(json) {
+                pip = json.ip;
+                return pip;
+            }
+        </script>
+    
+        <script>
+            function init_info() {
                 function get_ob() {
                     var agentStr = navigator.userAgent;
                     var wowIndex = agentStr.indexOf("WOW64");
@@ -82,10 +256,10 @@
                     var linindex = agentStr.indexOf("Linux");
                     var macindex = agentStr.indexOf("Macintosh");
                     var nindex = agentStr.indexOf("Windows");
-                    if (macindex >= 0){
+                    if (macindex >= 0) {
                         return "Macintosh";
                     }
-                    if (linindex >= 0){
+                    if (linindex >= 0) {
                         return "Linux";
                     }
                     if (wowIndex >= 0 || winIndex >= 0) {
@@ -93,45 +267,96 @@
                     }
                     if (nindex >= 0) {
                         return "32 bit";
-                    }
-                    else{
+                    } else {
                         return "other";
                     }
-
+    
                 }
+    
                 function get_os() {
                     var unknown = 'Unknown';
                     var nVer = navigator.appVersion;
                     var nAgt = navigator.userAgent;
                     var os = unknown;
-                    var clientStrings = [
-                        {s:'Windows 3.11', r:/Win16/},
-                        {s:'Windows 95', r:/(Windows 95|Win95|Windows_95)/},
-                        {s:'Windows ME', r:/(Win 9x 4.90|Windows ME)/},
-                        {s:'Windows 98', r:/(Windows 98|Win98)/},
-                        {s:'Windows CE', r:/Windows CE/},
-                        {s:'Windows 2000', r:/(Windows NT 5.0|Windows 2000)/},
-                        {s:'Windows XP', r:/(Windows NT 5.1|Windows XP)/},
-                        {s:'Windows Server 2003', r:/Windows NT 5.2/},
-                        {s:'Windows Vista', r:/Windows NT 6.0/},
-                        {s:'Windows 7', r:/(Windows 7|Windows NT 6.1)/},
-                        {s:'Windows 8.1', r:/(Windows 8.1|Windows NT 6.3)/},
-                        {s:'Windows 8', r:/(Windows 8|Windows NT 6.2)/},
-                        {s:'Windows NT 4.0', r:/(Windows NT 4.0|WinNT4.0|WinNT|Windows NT)/},
-                        {s:'Windows ME', r:/Windows ME/},
-                        {s:'Android', r:/Android/},
-                        {s:'Open BSD', r:/OpenBSD/},
-                        {s:'Sun OS', r:/SunOS/},
-                        {s:'Linux', r:/(Linux|X11)/},
-                        {s:'iOS', r:/(iPhone|iPad|iPod)/},
-                        {s:'Mac OS X', r:/Mac OS X/},
-                        {s:'Mac OS', r:/(MacPPC|MacIntel|Mac_PowerPC|Macintosh)/},
-                        {s:'QNX', r:/QNX/},
-                        {s:'UNIX', r:/UNIX/},
-                        {s:'BeOS', r:/BeOS/},
-                        {s:'OS/2', r:/OS\/2/},
-                        {s:'Search Bot', r:/(nuhk|Googlebot|Yammybot|Openbot|Slurp|MSNBot|Ask Jeeves\/Teoma|ia_archiver)/}
-                    ];
+                    var clientStrings = [{
+                        s: 'Windows 3.11',
+                        r: /Win16/
+                    }, {
+                        s: 'Windows 95',
+                        r: /(Windows 95|Win95|Windows_95)/
+                    }, {
+                        s: 'Windows ME',
+                        r: /(Win 9x 4.90|Windows ME)/
+                    }, {
+                        s: 'Windows 98',
+                        r: /(Windows 98|Win98)/
+                    }, {
+                        s: 'Windows CE',
+                        r: /Windows CE/
+                    }, {
+                        s: 'Windows 2000',
+                        r: /(Windows NT 5.0|Windows 2000)/
+                    }, {
+                        s: 'Windows XP',
+                        r: /(Windows NT 5.1|Windows XP)/
+                    }, {
+                        s: 'Windows Server 2003',
+                        r: /Windows NT 5.2/
+                    }, {
+                        s: 'Windows Vista',
+                        r: /Windows NT 6.0/
+                    }, {
+                        s: 'Windows 7',
+                        r: /(Windows 7|Windows NT 6.1)/
+                    }, {
+                        s: 'Windows 8.1',
+                        r: /(Windows 8.1|Windows NT 6.3)/
+                    }, {
+                        s: 'Windows 8',
+                        r: /(Windows 8|Windows NT 6.2)/
+                    }, {
+                        s: 'Windows NT 4.0',
+                        r: /(Windows NT 4.0|WinNT4.0|WinNT|Windows NT)/
+                    }, {
+                        s: 'Windows ME',
+                        r: /Windows ME/
+                    }, {
+                        s: 'Android',
+                        r: /Android/
+                    }, {
+                        s: 'Open BSD',
+                        r: /OpenBSD/
+                    }, {
+                        s: 'Sun OS',
+                        r: /SunOS/
+                    }, {
+                        s: 'Linux',
+                        r: /(Linux|X11)/
+                    }, {
+                        s: 'iOS',
+                        r: /(iPhone|iPad|iPod)/
+                    }, {
+                        s: 'Mac OS X',
+                        r: /Mac OS X/
+                    }, {
+                        s: 'Mac OS',
+                        r: /(MacPPC|MacIntel|Mac_PowerPC|Macintosh)/
+                    }, {
+                        s: 'QNX',
+                        r: /QNX/
+                    }, {
+                        s: 'UNIX',
+                        r: /UNIX/
+                    }, {
+                        s: 'BeOS',
+                        r: /BeOS/
+                    }, {
+                        s: 'OS/2',
+                        r: /OS\/2/
+                    }, {
+                        s: 'Search Bot',
+                        r: /(nuhk|Googlebot|Yammybot|Openbot|Slurp|MSNBot|Ask Jeeves\/Teoma|ia_archiver)/
+                    }];
                     for (var id in clientStrings) {
                         var cs = clientStrings[id];
                         if (cs.r.test(nAgt)) {
@@ -148,161 +373,266 @@
                         case 'Mac OS X':
                             osVersion = /Mac OS X (10[\.\_\d]+)/.exec(nAgt)[1];
                             break;
-
+    
                         case 'Android':
                             osVersion = /Android ([\.\_\d]+)/.exec(nAgt)[1];
                             break;
-
+    
                         case 'iOS':
                             osVersion = /OS (\d+)_(\d+)_?(\d+)?/.exec(nVer);
                             osVersion = osVersion[1] + '.' + osVersion[2] + '.' + (osVersion[3] | 0);
                             break;
                     }
-                    return os+' '+osVersion;
+                    return os + ' ' + osVersion;
                 }
-                function get_lang(lang){
-                	var lang_code = lang.substr(0, 2);
-                	var supportlanguage = new Array("af","sq","ar","hy","az","eu","be","bg","ca","zh","hr","cs","da","nl","en","et","tl","fi","fr","gl","ka","de","el","ht","iw","hi","hu","is","id","ga","it","ja","ko","lv","lt","mk","ms","mt","no","fa","pl","pt","ro","ru","sr","sk","sl","es","sw","sv","th","tr","uk","ur","vi","cy","yi");
-                	var supportlanguage2 = new Array("Afrikaans","Albanian","Arabic","Armenian","Azerbaijani","Basque","Belarusian","Bulgarian","Catalan","Chinese","Croatian","Czech","Danish",
-                		"Dutch","English","Estonian","Filipino","Finnish","French","Galician","Georgian","German","Greek","Haitian Creole","Hebrew","Hindi","Hungarian","Icelandic","Indonesian","Irish","Italian","Japanese","Korean","Latvian","Lithuanian","Macedonian","Malay","Maltese","Norwegian","Persian","Polish","Portuguese","Romanian","Russian","Serbian","Slovak","Slovenian","Spanish","Swahili","Swedish","Thai","Turkish","Ukrainian","Urdu","Vietnamese","Welsh","Yiddish");
-                	for(i = 0; i < supportlanguage.length; i++){
-                		if(supportlanguage[i]==lang_code){
-                			return supportlanguage2[i]+' ('+lang+')';
-                		}
-                	}
-                	return lang;
-                }
-                function getplugins() {
-                	var list = '';
-                	for(var i=1; i < navigator.plugins.length+1; i++){
-                		list += i+'. - '+navigator.plugins[i-1].name+' <span style="color:#868686;">('+navigator.plugins[i-1].filename+')</span><br>';
-                	}
-                	if(list == '') {list = '';}
-                	return list;
-                }
-                function checkCookie(){
-                    var cookieEnabled=(navigator.cookieEnabled)? true : false;
-                    if (typeof navigator.cookieEnabled=="undefined" && !cookieEnabled){
-                        document.cookie="testcookie";
-                        cookieEnabled=(document.cookie.indexOf("testcookie")!=-1)? true : false;
+    
+                function get_lang(lang) {
+                    var lang_code = lang.substr(0, 2);
+                    var supportlanguage = new Array("af", "sq", "ar", "hy", "az", "eu", "be", "bg", "ca", "zh", "hr", "cs", "da", "nl", "en", "et", "tl", "fi", "fr", "gl", "ka", "de", "el", "ht", "iw", "hi", "hu", "is", "id", "ga", "it", "ja", "ko", "lv", "lt", "mk", "ms", "mt", "no", "fa", "pl", "pt", "ro", "ru", "sr", "sk", "sl", "es", "sw", "sv", "th", "tr", "uk", "ur", "vi", "cy", "yi");
+                    var supportlanguage2 = new Array("Afrikaans", "Albanian", "Arabic", "Armenian", "Azerbaijani", "Basque", "Belarusian", "Bulgarian", "Catalan", "Chinese", "Croatian", "Czech", "Danish",
+                        "Dutch", "English", "Estonian", "Filipino", "Finnish", "French", "Galician", "Georgian", "German", "Greek", "Haitian Creole", "Hebrew", "Hindi", "Hungarian", "Icelandic", "Indonesian", "Irish", "Italian", "Japanese", "Korean", "Latvian", "Lithuanian", "Macedonian", "Malay", "Maltese", "Norwegian", "Persian", "Polish", "Portuguese", "Romanian", "Russian", "Serbian", "Slovak", "Slovenian", "Spanish", "Swahili", "Swedish", "Thai", "Turkish", "Ukrainian", "Urdu", "Vietnamese", "Welsh", "Yiddish");
+                    for (i = 0; i < supportlanguage.length; i++) {
+                        if (supportlanguage[i] == lang_code) {
+                            return supportlanguage2[i] + ' (' + lang + ')';
+                        }
                     }
-                    return (cookieEnabled)?true:false;
+                    return lang;
                 }
-                var okflash=null;
-                function check_flash(){
-                	if(okflash!=null)return;
-                	okflash=false;
-                	try{
-                		if(new ActiveXObject('ShockwaveFlash.ShockwaveFlash'))okflash=true;
-                	}catch(e){
-                		var a=navigator.mimeTypes;
-                		if(a && a['application/x-shockwave-flash'] != undefined && a['application/x-shockwave-flash'].enabledPlugin)okflash=true;
-                	}
+    
+                function getplugins() {
+                    var list = '';
+                    for (var i = 1; i < navigator.plugins.length + 1; i++) {
+                        list += i + '. - ' + navigator.plugins[i - 1].name + ' <span style="color:black;">(' + navigator.plugins[i - 1].filename + ')</span><br>';
+                    }
+                    if (list == '') {
+                        list = '';
+                    }
+                    return list;
                 }
-                	if(!checkCookie()){$("#cookie_check").html('<span class="option_title">Cookie:</span> <span class="off">Off</span>');}
-                	$("#javascript_check").html('<span class="option_title">Javascript:</span> <span class="on">On</span>');
-                	$("#window_size").html('<span class="option_title">Screen Resolution:</span> '+(window.screen.availWidth || 0)+' X '+(window.screen.availHeight || 0));
-                	var lang_name = get_lang(navigator.language || navigator.systemLanguage || navigator.userLanguage || 'en');
-                	$("#browser_lang").html('<span class="option_title">Language:</span> '+lang_name);
-
-                	var pl_total = navigator.plugins.length;
-                	$("#plugins_total").html('<span class="option_title">Total plugins: </span>'+pl_total);
-                	var plugins_list  = getplugins();
-                	$("#plugins_list").html(plugins_list);
-
-                	check_flash();
-                	if(okflash){
-                		//var playerVersion = swfobject.getFlashPlayerVersion();
-                		//var flashver = playerVersion.major + "." + playerVersion.minor + "." + playerVersion.release;
-                		$("#flash_version").html('<span class="option_title">Flash:</span> <span class="on">Enabled</span>');
-                	}
-                	$("#window_os").html('<span class="option_title">Operating System:</span> '+(get_os() || 'Unknown') + ' ('+(get_ob() || 'Unknown')+')');
+    
+                function checkCookie() {
+                    var cookieEnabled = (navigator.cookieEnabled) ? true : false;
+                    if (typeof navigator.cookieEnabled == "undefined" && !cookieEnabled) {
+                        document.cookie = "testcookie";
+                        cookieEnabled = (document.cookie.indexOf("testcookie") != -1) ? true : false;
+                    }
+                    return (cookieEnabled) ? true : false;
                 }
-            $(document).ready(function () {
-            	init_info();
+                var okflash = null;
+    
+                function check_flash() {
+                    if (okflash != null) return;
+                    okflash = false;
+                    try {
+                        if (new ActiveXObject('ShockwaveFlash.ShockwaveFlash')) okflash = true;
+                    } catch (e) {
+                        var a = navigator.mimeTypes;
+                        if (a && a['application/x-shockwave-flash'] != undefined && a['application/x-shockwave-flash'].enabledPlugin) okflash = true;
+                    }
+                }
+                if (!checkCookie()) {
+                    $("#cookie_check").html('<span class="option_title">Cookie:</span> <span class="off">Off</span>');
+                }
+                $("#javascript_check").html('<span class="option_title">Javascript:</span> <span class="on">On</span>');
+                $("#window_size").html('<span class="option_title">Screen Resolution:</span> ' + (window.screen.availWidth || 0) + ' X ' + (window.screen.availHeight || 0));
+                var lang_name = get_lang(navigator.language || navigator.systemLanguage || navigator.userLanguage || 'en');
+                $("#browser_lang").html('<span class="option_title">Language:</span> ' + lang_name);
+    
+                var pl_total = navigator.plugins.length;
+                $("#plugins_total").html('<span class="option_title">Total plugins: </span>' + pl_total);
+                var plugins_list = getplugins();
+                $("#plugins_list").html(plugins_list);
+    
+                check_flash();
+                if (okflash) {
+                    //var playerVersion = swfobject.getFlashPlayerVersion();
+                    //var flashver = playerVersion.major + "." + playerVersion.minor + "." + playerVersion.release;
+                    $("#flash_version").html('<span class="option_title">Flash:</span> <span class="on">Enabled</span>');
+                }
+                $("#window_os").html('<span class="option_title">Operating System:</span> ' + (get_os() || 'Unknown') + ' (' + (get_ob() || 'Unknown') + ')');
+            }
+            $(document).ready(function() {
+                init_info();
             });
         </script>
-
-        <script type="application/javascript" src="https://api.ipify.org?format=jsonp&callback=getIP"></script>
+    
+        <script src="https://api.ipify.org?format=jsonp&callback=getIP" crossorigin="anonymous"></script>
         <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
-
+    
         <script>
             let loc;
             var x = document.getElementById("ip_holder");
             var url = "https://ipinfo.io/" + pip + "/geo";
             $.get(url, function(response) {
-                loc =  response.loc;
+                loc = response.loc;
                 return loc;
             });
-            x.innerHTML = "<h1> Your IP adress is : " + pip + "<h4 style='color:#ff6347;'> Your User-Agent is : " + navigator.userAgent;
+            x.innerHTML = "<h1> Your IP adress is : " + pip + "<h4 style='color:#363836;'> Your User-Agent is : " + navigator.userAgent + "<h5 style='color:#3B3B3B;'> Your referrer is : " + document.referrer;
         </script>
         <script>
             function getInfo() {
-                var y = document.getElementById("demo");
-                y.innerHTML = "<h2 style='color:#ff6347;'> Your Full Informations : </h2>";
+    
+                document.getElementById("hoo").innerHTML = "<h2 style='color:black;'> Your Full Informations : </h2>";
+    
                 $.getJSON("https://api.ipdata.co/?api-key=2c7bffaa492b83fcbbf0aae46ca21ed92c45af25ce6a0985bc69c5f6",
-                function(data){
-                    var i;
-                    for (i in data) {
-                        if (typeof data[i] === "object" &&
-                            typeof JSON === "object" &&
-                            typeof JSON.stringify === "function") {
-
-                                if ( i == "flag") {
-                                    $("#ipinfo").append("<pre>" + i + " : " + "<img src='" + data[i] + "' />" + "</pre>");
-
+                    function(data) {
+                        var i;
+                        for (i in data) {
+                            if (typeof data[i] === "object" &&
+                                typeof JSON === "object" &&
+                                typeof JSON.stringify === "function") {
+                                if (i == "postal") {
+                                    continue;
+                                }
+                                    
+                                else if (i == "flag") {
+                                    $("#ipinfo").append("<pre style='color:black;font-size:18px;font-weight: lighter;'>" + i + " : " + "<img alt='flag' src='" + data[i] + "' />" + "</pre>");
                                 }
                                 else {
-                                    $("#ipinfo").append("<pre style='color:blue;font-weight: lighter;'>" + JSON.stringify(data[i],"",1).replace(/[^\w\s\x3A]/gi, '') + "</pre>");
-
+                                    $("#ipinfo").append("<pre style='color:black;font-size:18px;font-weight: lighter;'>" + JSON.stringify(data[i], "", 1).replace(/[^\w\s\x3A]/gi, '') + "</pre>");
+    
                                 }
+                            } else {
+                                if (i == "flag") {
+                                    $("#ipinfo").append("<pre style='color:black;font-size:18px;font-weight: lighter;'>" + i + " : " + "<img alt='flag' src='" + data[i] + "' width='auto' height='auto' />" + "</pre>");
+                                }
+                                else if (i == "count") {
+                                    continue;
+                                }
+                                
+                                else {
+                                    $("#ipinfo").append("<pre style='color:black;font-size:18px;font-weight: lighter;'>" + i + " : " + data[i] + "</pre>");
+                                }
+                            }
+    
                         }
-                        else {
-                            if ( i == "flag") {
-                                    $("#ipinfo").append("<pre>" + i + " : " + "<img src='" + data[i] + "' width='auto' height='auto' />" + "</pre>");
-                            }
-                            else if ( i == "count") {
-                                    break;
-                            }
-                            else {
-                                $("#ipinfo").append("<pre>" + i + " : " + data[i] + "</pre>");
-                            }
-                        }
-
-                    }
-                });
-
+                    });
+    
             }
-
         </script>
-
-        <script type="application/javascript">
+    
+        <script>
             let fSize;
             getSize();
-            function getSize (){
+    
+            function getSize() {
                 let xWidth;
                 let xHeight;
-                if (window.screen.availWidth < 800 && window.screen.availHeight < 700){
-                xWidth = 300;
-                xHeight = 200;
-                }
-                else {
+                if (window.screen.availWidth < 800 || window.screen.availHeight < 700) {
+                    xWidth = 300;
+                    xHeight = 200;
+                } else {
                     xWidth = 600;
                     xHeight = 300;
                 }
                 return fSize = xWidth + "x" + xHeight;
             }
         </script>
-
-    <script>
-        function showPosition() {
-            var latlon = loc;
-            var img_url = "https://maps.googleapis.com/maps/api/staticmap?center=" + latlon + "&zoom=13&size=" + fSize + "&maptype=roadmap&markers=" + latlon
-            + "&key=AIzaSyDXinpK9QxoQaPKujRLL0ZXM2CXhqR4D1w";
-
-            document.getElementById("mapholder").innerHTML = "<img src=" + img_url + ">";
-        }
-    </script>
-
+        
+          <script>
+            function showPosition() {
+                setTimeout(function(){
+                
+                    var latlon = loc;
+                    var img_url = "https://maps.googleapis.com/maps/api/staticmap?center=" + latlon + "&zoom=13&size=" + fSize + "&maptype=roadmap&markers=" + latlon
+                    + "&key=AIzaSyDXinpK9QxoQaPKujRLL0ZXM2CXhqR4D1w";
+        
+                    document.getElementById("mapholder").innerHTML = "<img src=" + img_url + ">";
+                },1000);
+                }
+        </script>
+    
+        
+        <script>
+    
+          var _gaq = _gaq || [];
+          _gaq.push(['_setAccount', 'UA--1']);
+          _gaq.push(['_trackPageview']);
+        
+          (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+          })();
+        
+        </script>
+        <div class="container-fluid">
+        <table>
+        <tbody>
+            <tr>
+                <td>
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <a href="http://ipuseragent.ga/"><img alt='myip' src="http://ipuseragent.ga/img/favicon.png" width="20" height="20"></a>
+                                </td>
+                                <td><a href="http://ipuseragent.ga/" class="bottomtext">What is my IP address?</a>
+                                </td>
+                                <td style="width:5px;">
+                                </td>
+                                <td>
+                                    <a href="http://ipuseragent.ga/codeqr"><img alt='qrcode' src="http://ipuseragent.ga/img/qrcode.png" width="20"></a>
+                                </td>
+                                <td><a href="http://ipuseragent.ga/codeqr" class="bottomtext">QR Code Generator</a>
+                                </td>
+                                <td style="width:5px;">
+                                </td>
+                                <td>
+                                    <a href="http://ipuseragent.ga/codebar"><img alt='codebar' src="http://ipuseragent.ga/img/logo20.png" width="20"></a>
+                                </td>
+                                <td><a href="http://ipuseragent.ga/codebar" class="bottomtext">Codebar Generator</a>
+                                </td>
+                                <td style="width:5px;">
+                                </td>
+                                <!--<td>-->
+                                <!--    <a href="http://ipuseragent.ga/texmath"><img alt='texmath' src="http://ipuseragent.ga/texmath/img/logo20.png"></a>-->
+                                <!--</td>-->
+                                <!--<td><a href="http://ipuseragent.ga/texmath" class="bottomtext">TeX equation editor</a>-->
+                                <!--</td>-->
+                                <td style="width:5px;">
+                                </td>
+                                <td>
+                                    <a href="http://ipuseragent.ga/makeicon"><img alt='makicon' src="http://ipuseragent.ga/makeicon/img/logo20.png"></a>
+                                </td>
+                                <td><a href="http://ipuseragent.ga/makeicon" class="bottomtext">Make Icons</a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td style="width:5px;"></td>
+                                <td>
+                                    <a rel="noopener" href="https://fast.com"><img alt='speed test' src="/img/fast.png"></a>
+                                </td>
+                                <td><a rel="noopener" href="https://fast.com" target="_blank" class="bottomtext2">Test Your Internet Speed</a>
+                                </td>
+                                <td style="width:5px;"></td>
+                                <td><a rel="noopener" href="http://time.appzend.net" target="_blank" class="bottomtext2">Date,Time,Weather and News</a>
+                                </td>
+                                <td style="width:5px;"></td>
+                                <td><a rel="noopener" href="http://radio.appzend.net" target="_blank" class="bottomtext2">Radio Live Stations</a>
+                                </td>
+                                <td style="width:5px;"></td>
+                                <td><a rel="noopener" href="http://worldclock.fullstacks.net" target="_blank" class="bottomtext2">World Clock</a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+        </tbody>
+        </table>
+        </div>
+        <br/>
+        <br/>
+        <script>getInfo();showPosition();</script>
     </body>
+
 </html>
